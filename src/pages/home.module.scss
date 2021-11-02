@@ -1,0 +1,49 @@
+$fill: #fff;
+$stroke: black;
+$surrounding: white;
+
+$square-size: 50px;
+$stroke-size: 2px;
+$size: $square-size + $stroke-size;
+$fraction: $stroke-size / $size;
+
+@function square($x, $y, $color: $surrounding) {
+  @return $x * $size $y * $size 0 $stroke-size $color;
+}
+.square {
+  height: $square-size;
+  width: $square-size;
+  background: $fill;
+  animation: snake 0.8s infinite;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.fadeIn {
+  transition: opacity 1s ease;
+}
+
+@keyframes snake {
+  0% {
+    box-shadow: square(0, -1), square(-1, 0), square(0, 1), square(1, 0),
+      square(0, 0, black);
+  }
+  25% {
+    box-shadow: square(-1 - $fraction, -1), square(-1, 0), square(0, 1),
+      square(1, 0), square(0, 0, black);
+  }
+  50% {
+    box-shadow: square(-1 - $fraction, -1), square(-1, 1 + $fraction),
+      square(0, 1), square(1, 0), square(0, 0, black);
+  }
+  75% {
+    box-shadow: square(-1 - $fraction, -1), square(-1, 1 + $fraction),
+      square(1 + $fraction, 1), square(1, 0), square(0, 0, black);
+  }
+  100% {
+    box-shadow: square(-1 - $fraction, -1), square(-1, 1 + $fraction),
+      square(1 + $fraction, 1), square(1, -1 - $fraction), square(0, 0, black);
+  }
+}

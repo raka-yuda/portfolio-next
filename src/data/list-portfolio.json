@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Marked",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "description": "My purpose for making this project is to comply for marketplace boilerplate needs. For the website, this project was built with Nextjs typescript, Reactjs, and Tailwindcss.",
+    "tags": ["UI", "Frontend Application", "Backend Application"],
+    "link": [
+      {
+        "mobile": "https://github.com/RakaYuda/groups"
+      },
+      {
+        "backend": "https://github.com/RakaYuda/poentjak-api"
+      }
+    ]
+  },
+  {
+    "title": "Jakarta Foodmaping",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "description": "This is my personal project for applying arcgis api with react js. Styling appearance of this project actually for dashboard appearance. This project was built with Nextjs, Reactjs, Tailwindcss, Redux Toolkit, Echart.",
+    "tags": ["Frontend Application", "Backend Application", "CMS"],
+    "link": [
+      {
+        "mobile": "https://github.com/RakaYuda/poentjak"
+      },
+      {
+        "backend": "https://github.com/RakaYuda/poentjak-api"
+      }
+    ]
+  },
+  {
+    "title": "Portfolio",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "description": "This is my current website portfolio. Since i still on learning with reactjs, so i decided to make my own personal website with reactjs stack. This project was built with Nextjs, Reactjs, Tailwindcss.",
+    "tags": ["UI", "Frontend Website"],
+    "link": [
+      {
+        "mobile": "https://github.com/RakaYuda/poentjak"
+      },
+      {
+        "backend": "https://github.com/RakaYuda/poentjak-api"
+      }
+    ]
+  },
+  {
+    "title": "Poentjak",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "description": "This is a wiki for all mountain located in Indonesia. My purpose for making this project is fullfil information about mountain, so every mountain climbers can easily access the information without do searching more.",
+    "tags": ["UI", "Mobile Application", "Backend Application"],
+    "link": [
+      {
+        "mobile": "https://github.com/RakaYuda/poentjak"
+      },
+      {
+        "backend": "https://github.com/RakaYuda/poentjak-api"
+      }
+    ]
+  },
+  {
+    "title": "Groups",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "description": "Project live chat application built with flutter and firebase.",
+    "tags": ["UI", "Mobile Application"],
+    "link": [
+      {
+        "mobile": "https://github.com/RakaYuda/groups"
+      },
+      {
+        "backend": "https://github.com/RakaYuda/poentjak-api"
+      }
+    ]
+  },
+
+  {
+    "title": "Newest",
+    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "description": "This is a flutter application and my purpose for making this application is for implementing news API.",
+    "tags": ["Mobile Application"],
+    "link": [
+      {
+        "mobile": "https://github.com/RakaYuda/poentjak"
+      },
+      {
+        "backend": "https://github.com/RakaYuda/poentjak-api"
+      }
+    ]
+  }
+]

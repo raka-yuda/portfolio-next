@@ -1,0 +1,34 @@
+[
+  {
+    "title": "CSS",
+    "image_src": "/icon/css-icon.svg"
+  },
+  {
+    "title": "HTML",
+    "image_src": "/icon/html-icon.svg"
+  },
+  {
+    "title": "PHP",
+    "image_src": "/icon/php-icon.svg"
+  },
+  {
+    "title": "Codeigniter",
+    "image_src": "/icon/ci-icon.svg"
+  },
+  {
+    "title": "Nodejs",
+    "image_src": "/icon/nodejs-icon.svg"
+  },
+  {
+    "title": "React",
+    "image_src": "/icon/react-icon.svg"
+  },
+  {
+    "title": "Flutter",
+    "image_src": "/icon/flutter-icon.svg"
+  },
+  {
+    "title": "Mysql",
+    "image_src": "/icon/mysql-icon.svg"
+  }
+]
