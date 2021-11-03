@@ -1,6 +1,6 @@
-export type Link = {
-  mobile: string;
-  backend: string;
+export type Source = {
+  type: string;
+  link: string;
 };
 
 export type Portfolio = {
@@ -8,5 +8,5 @@ export type Portfolio = {
   image_url: string;
   description: string;
   tags: string[];
-  link: Link[];
+  source: Source[];
 };
