@@ -1,7 +1,7 @@
 [
   {
     "title": "Marked",
-    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "image_url": "https://raw.githubusercontent.com/RakaYuda/marked-website/main/public/ss-marked.png",
     "description": "My purpose for making this project is to comply for marketplace boilerplate needs. For the website, this project was built with Nextjs typescript, Reactjs, and Tailwindcss.",
     "tags": ["UI", "Frontend Website Application", "Backend Application"],
     "source": [
@@ -17,7 +17,7 @@
   },
   {
     "title": "Jakarta Foodmaping",
-    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "image_url": "https://raw.githubusercontent.com/RakaYuda/jakarta-foodmaping/main/public/ss-jakarta-foodmaping.png",
     "description": "This is my personal project for applying arcgis api with react js. Styling appearance of this project actually for dashboard appearance. This project was built with Nextjs, Reactjs, Tailwindcss, Redux Toolkit, Echart.",
     "tags": ["Frontend Website Application", "Backend Application", "CMS"],
     "source": [
@@ -29,7 +29,7 @@
   },
   {
     "title": "Portfolio",
-    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "image_url": "https://raw.githubusercontent.com/RakaYuda/portfolio-next/main/assets/images/ss-portfolio.png",
     "description": "This is my current website portfolio. Since i still on learning with reactjs, so i decided to make my own personal website with reactjs stack. This project was built with Nextjs, Reactjs, Tailwindcss.",
     "tags": ["UI", "Frontend Website Application"],
     "source": [
@@ -41,7 +41,7 @@
   },
   {
     "title": "Poentjak",
-    "image_url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9c048118230957.60855b59d24b4.png",
+    "image_url": "https://raw.githubusercontent.com/RakaYuda/poentjak/master/lib/assets/images/ss-poentjak.png",
     "description": "This is a wiki for all mountain located in Indonesia. My purpose for making this project is fullfil information about mountain, so every mountain climbers can easily access the information without do searching more.",
     "tags": ["UI", "Frontend Mobile Application", "Backend Application"],
     "source": [

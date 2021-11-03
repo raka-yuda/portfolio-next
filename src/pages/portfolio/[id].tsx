@@ -25,7 +25,10 @@ const Portfolio = ({ portfolio }: Props) => {
               <div className={`flex flex-col md:ml-3`}>
                 {portfolio.source.map((source) => {
                   return (
-                    <div className={`flex flex-row `}>
+                    <div
+                      key={"src-" + source.link}
+                      className={`flex flex-row `}
+                    >
                       <a
                         href={source.link}
                         target="_blank"
@@ -49,7 +52,17 @@ const Portfolio = ({ portfolio }: Props) => {
               className={`flex flex-row justify-center items-start z-0 ${``}`}
             >
               {/* <Link href={``}> */}
-              <div className="relative h-36 w-52 md:h-52 md:w-80 mr-4 mt-4 bg-gray-400">
+              <div
+                className="relative h-36 w-52 md:h-52 md:w-80 mr-4 mt-4 "
+                style={{
+                  backgroundColor: "#fff",
+                  backgroundImage:
+                    "radial-gradient(#000 10%, transparent 11%), radial-gradient(#000 10%, transparent 11%)",
+                  backgroundSize: "5px 5px",
+                  backgroundPosition: "0 0, 30px 30px",
+                  backgroundRepeat: "repeat",
+                }}
+              >
                 <div
                   className="relative flex justify-center items-center h-36 w-52 md:h-52 md:w-80 inset-x-4 -inset-y-4 z-20 bg-cover bg-center bg-white"
                   style={{
@@ -76,7 +89,10 @@ const Portfolio = ({ portfolio }: Props) => {
           >
             {portfolio.tags.map((tag) => {
               return (
-                <div className={`flex flex-row items-start z-0 mx-2`}>
+                <div
+                  key={"tag-" + tag}
+                  className={`flex flex-row items-start z-0 mx-2`}
+                >
                   <div className="relative mr-4 mt-4 bg-gray-400">
                     <div className="relative flex justify-center items-center  inset-x-2 -inset-y-2 z-20 bg-cover bg-center bg-white border">
                       <div className="w-full h-full flex justify-center items-center  hover:bg-opacity-60 px-2 py-1">
