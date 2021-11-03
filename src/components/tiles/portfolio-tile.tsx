@@ -15,7 +15,7 @@ const PortfolioTile = ({ href, title, imageUrl, className }: Props) => {
       <Link href={href}>
         <div className="cursor-pointer relative h-36 w-full md:h-52 md:w-80 mr-4 mt-4 bg-gray-400">
           <div
-            className="relative flex justify-center items-center h-36 w-full md:h-52 md:w-80 inset-x-4 -inset-y-4 z-20 hover:bg-black bg-cover bg-center"
+            className="relative flex justify-center items-center h-36 w-full md:h-52 md:w-80 inset-x-4 -inset-y-4 z-20 hover:bg-black bg-cover bg-center border"
             style={{
               backgroundImage: `url("${imageUrl}")`,
             }}

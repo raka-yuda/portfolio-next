@@ -15,9 +15,34 @@ const Portfolio = ({ portfolio }: Props) => {
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 flex-col p-4">
             <p className="text-2xl mb-6">{portfolio.title}</p>
-            <p className="text-base whitespace-normal">
+            <p className="text-base whitespace-normal mb-6">
               {portfolio.description}
             </p>
+            <div className={`flex flex-row`}>
+              <div className={`flex flex-row`}>
+                <p className="text-base whitespace-normal">Source :</p>
+              </div>
+              <div className={`flex flex-col md:ml-3`}>
+                {portfolio.source.map((source) => {
+                  return (
+                    <div className={`flex flex-row `}>
+                      <a
+                        href={source.link}
+                        target="_blank"
+                        className="text-base whitespace-normal underline text-gray-500"
+                      >
+                        {source.type}
+                      </a>
+                    </div>
+                  );
+                })}
+                {/* <p className="text-base whitespace-normal">
+                  {portfolio.source.map((source) => {
+                    return source;
+                  })}
+                </p> */}
+              </div>
+            </div>
           </div>
           <div className="flex-1 flex-col mt-4">
             <div
