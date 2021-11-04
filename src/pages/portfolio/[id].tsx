@@ -134,7 +134,6 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       props: {
         portfolio: data.portfolio,
       },
-      // revalidate: 86400,
     };
   }
 };
