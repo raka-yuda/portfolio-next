@@ -1,4 +1,3 @@
-import lottie from "lottie-web";
 import { useEffect, useState } from "react";
 import classes from "./home.module.scss";
 import Link from "next/link";
