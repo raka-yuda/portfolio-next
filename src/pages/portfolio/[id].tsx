@@ -112,18 +112,18 @@ const Portfolio = ({ portfolio }: Props) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths<{ params: string }> = async () => {
-  const res = await fetch("/api/portfolios");
-  const data = await res.json();
+// export const getStaticPaths: GetStaticPaths<{ params: string }> = async () => {
+//   const res = await fetch("/api/portfolios");
+//   const data = await res.json();
 
-  const paths = data.portfolios.map((portfolio: any, index: number) => ({
-    params: { id: index.toString() },
-  }));
+//   const paths = data.portfolios.map((portfolio: any, index: number) => ({
+//     params: { id: index.toString() },
+//   }));
 
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false };
-};
+//   // We'll pre-render only these paths at build time.
+//   // { fallback: false } means other routes should 404.
+//   return { paths, fallback: false };
+// };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   {
