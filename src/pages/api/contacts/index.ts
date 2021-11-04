@@ -3,6 +3,7 @@ import { Contact } from "./../../../types/contact";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import fs from "fs";
+import path from 'path';
 
 type ResponseType = {
   contacts: Contact[];
@@ -10,7 +11,7 @@ type ResponseType = {
 
 const fetchContacts = () => {
   const dataPath = "./src/data/list-contact.json";
-  const rawData = fs.readFileSync(dataPath, "utf-8");
+  const rawData = fs.readFileSync(path.resolve(__dirname, dataPath) , "utf-8");
   return JSON.parse(rawData) as Contact[];
 };
 

@@ -3,6 +3,7 @@ import { Portfolio } from "../../../types/portfolio";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import fs from "fs";
+import path from 'path';
 
 type ResponseType = {
   portfolios: Portfolio[];
@@ -10,7 +11,7 @@ type ResponseType = {
 
 const fetchPortfolios = () => {
   const dataPath = "./src/data/list-portfolio.json";
-  const rawData = fs.readFileSync(dataPath, "utf-8");
+  const rawData = fs.readFileSync(path.resolve(__dirname, dataPath), "utf-8");
   return JSON.parse(rawData) as Portfolio[];
 };
 
