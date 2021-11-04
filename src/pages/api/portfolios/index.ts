@@ -11,9 +11,9 @@ type ResponseType = {
 
 const fetchPortfolios = () => {
   const dataPath = "./src/data/list-portfolio.json";
-  const rawData = fs.readFileSync(dataPath, "utf-8");
+  const rawData = require("../../../data/list-portfolio.json");
 
-  return JSON.parse(rawData) as Portfolio[];
+  return rawData as Portfolio[];
 };
 
 export default function handler(
