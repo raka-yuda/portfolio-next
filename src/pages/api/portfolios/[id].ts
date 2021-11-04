@@ -2,16 +2,13 @@ import { Portfolio } from "./../../../types/portfolio";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import fs from "fs";
-
 type ResponseType = {
   portfolio: Portfolio | "";
 };
 
 const fetchPortfolios = () => {
-  const dataPath = "./src/data/list-portfolio.json";
-  const rawData = fs.readFileSync(dataPath, "utf-8");
-  return JSON.parse(rawData) as Portfolio[];
+  const rawData = require("../../../data/list-portfolio.json");
+  return rawData as Portfolio[];
 };
 
 export default function handler(
@@ -19,11 +16,11 @@ export default function handler(
   res: NextApiResponse<ResponseType>
 ) {
   const { id } = req.query;
-  const restaurantData = fetchPortfolios();
+  const portfoliosData = fetchPortfolios();
   let portfolio = null;
 
   if (typeof id === "string") {
-    const data = restaurantData[parseInt(id)];
+    const data = portfoliosData[parseInt(id)];
     if (data === undefined) {
       portfolio = null;
     } else {
