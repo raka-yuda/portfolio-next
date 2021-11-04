@@ -117,10 +117,10 @@ const Home = ({ portfolios, contacts, techstacks }: Props) => {
   );
 };
 
-export async function getStaticProps() {
-  const portfoliosRes = await fetch("http://localhost:3000/api/portfolios");
-  const contactsRes = await fetch("http://localhost:3000/api/contacts");
-  const techstackRes = await fetch("http://localhost:3000/api/techstacks");
+export async function getServerSideProps() {
+  const portfoliosRes = await fetch("/api/portfolios");
+  const contactsRes = await fetch("/api/contacts");
+  const techstackRes = await fetch("/api/techstacks");
 
   const portfoliosData = await portfoliosRes.json();
   const contactsData = await contactsRes.json();

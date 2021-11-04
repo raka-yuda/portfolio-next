@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetServerSideProps } from "next";
 import { Portfolio as PortfolioType } from "../../types/portfolio";
 
 type Props = {
@@ -113,7 +113,7 @@ const Portfolio = ({ portfolio }: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths<{ params: string }> = async () => {
-  const res = await fetch("http://localhost:3000/api/portfolios");
+  const res = await fetch("/api/portfolios");
   const data = await res.json();
 
   const paths = data.portfolios.map((portfolio: any, index: number) => ({
@@ -125,10 +125,10 @@ export const getStaticPaths: GetStaticPaths<{ params: string }> = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   {
     const res = await fetch(
-      "http://localhost:3000/api/portfolios/" + params!.id
+      "/api/portfolios/" + params!.id
     ); // import your api function here
     const data = await res.json();
 
