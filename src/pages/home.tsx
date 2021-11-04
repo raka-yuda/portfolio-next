@@ -118,7 +118,10 @@ const Home = ({ portfolios, contacts, techstacks }: Props) => {
 };
 
 export async function getServerSideProps() {
-  let baseUrl = (process.env.NODE_ENV === 'production') ? 'https://portfolio-rakayuda.vercel.app' : 'http://localhost:3000';
+  let baseUrl =
+    process.env.NODE_ENV === "production"
+      ? "https://portfolio-rakayuda.vercel.app"
+      : "http://localhost:3000";
 
   const portfoliosRes = await fetch(`${baseUrl}/api/portfolios`);
   const contactsRes = await fetch(`${baseUrl}/api/contacts`);
@@ -135,7 +138,6 @@ export async function getServerSideProps() {
       contacts: contactsData.contacts,
       techstacks: techstackData.techstacks,
     },
-    revalidate: 86400,
   };
 }
 
