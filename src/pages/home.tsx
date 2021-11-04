@@ -118,9 +118,9 @@ const Home = ({ portfolios, contacts, techstacks }: Props) => {
 };
 
 export async function getServerSideProps() {
-  const portfoliosRes = await fetch("/api/portfolios");
-  const contactsRes = await fetch("/api/contacts");
-  const techstackRes = await fetch("/api/techstacks");
+  const portfoliosRes = await fetch(`${process.env.BASE_URL}/api/portfolios`);
+  const contactsRes = await fetch(`${process.env.BASE_URL}/api/contacts`);
+  const   techstackRes = await fetch(`${process.env.BASE_URL}/api/techstacks`);
 
   const portfoliosData = await portfoliosRes.json();
   const contactsData = await contactsRes.json();

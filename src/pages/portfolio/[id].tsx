@@ -128,7 +128,7 @@ const Portfolio = ({ portfolio }: Props) => {
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   {
     const res = await fetch(
-      "/api/portfolios/" + params!.id
+      process.env.BASE_URL + "/api/portfolios/" + params!.id
     ); // import your api function here
     const data = await res.json();
 
