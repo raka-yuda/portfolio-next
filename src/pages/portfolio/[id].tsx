@@ -29,13 +29,15 @@ const Portfolio = ({ portfolio }: Props) => {
                       key={"src-" + source.link}
                       className={`flex flex-row `}
                     >
-                      <a
-                        href={source.link}
-                        target="_blank"
-                        className="text-base whitespace-normal underline text-gray-500"
-                      >
-                        {source.type}
-                      </a>
+                      <Link href={source.link} passHref>
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-base whitespace-normal underline text-gray-500"
+                        >
+                          {source.type}
+                        </a>
+                      </Link>
                     </div>
                   );
                 })}
