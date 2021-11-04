@@ -1,4 +1,3 @@
-import lottie from "lottie-web";
 import { useEffect, useState } from "react";
 import classes from "./home.module.scss";
 import Link from "next/link";
@@ -83,9 +82,10 @@ const Home = ({ portfolios, contacts, techstacks }: Props) => {
           </div>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-4 border border-t-0 px-6 py-12">
             {techstacks &&
-              techstacks.map((techstack) => {
+              techstacks.map((techstack, index) => {
                 return (
                   <TechTile
+                    key={`ts-${index}`}
                     className={``}
                     href={``}
                     imageUrl={techstack.image_src}
@@ -99,9 +99,10 @@ const Home = ({ portfolios, contacts, techstacks }: Props) => {
           </div>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-3 border border-t-0 px-6 py-12">
             {contacts &&
-              contacts.map((contact) => {
+              contacts.map((contact, index) => {
                 return (
                   <ContactTile
+                    key={`contact-${index}`}
                     className={``}
                     href={contact.link}
                     imageUrl={contact.image_src}
@@ -116,10 +117,12 @@ const Home = ({ portfolios, contacts, techstacks }: Props) => {
   );
 };
 
-export async function getStaticProps() {
-  const portfoliosRes = await fetch("http://localhost:3000/api/portfolios");
-  const contactsRes = await fetch("http://localhost:3000/api/contacts");
-  const techstackRes = await fetch("http://localhost:3000/api/techstacks");
+export async function getServerSideProps() {
+  let baseUrl = (process.env.NODE_ENV === 'production') ? 'https://portfolio-rakayuda.vercel.app' : 'http://localhost:3000';
+
+  const portfoliosRes = await fetch(`${baseUrl}/api/portfolios`);
+  const contactsRes = await fetch(`${baseUrl}/api/contacts`);
+  const techstackRes = await fetch(`${baseUrl}/api/techstacks`);
 
   const portfoliosData = await portfoliosRes.json();
   const contactsData = await contactsRes.json();
