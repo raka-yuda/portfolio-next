@@ -23,27 +23,24 @@ const Portfolio = ({ portfolio }: Props) => {
                 <p className="text-base whitespace-normal">Source :</p>
               </div>
               <div className={`flex flex-col md:ml-3`}>
-                {portfolio.source.map((source) => {
-                  return (
-                    <div
-                      key={"src-" + source.link}
-                      className={`flex flex-row `}
-                    >
-                      <a
-                        href={source.link}
-                        target="_blank"
-                        className="text-base whitespace-normal underline text-gray-500"
+                {portfolio.source.length !== 0 &&
+                  portfolio.source.map((source) => {
+                    return (
+                      <div
+                        key={"src-" + source.link}
+                        className={`flex flex-row `}
                       >
-                        {source.type}
-                      </a>
-                    </div>
-                  );
-                })}
-                {/* <p className="text-base whitespace-normal">
-                  {portfolio.source.map((source) => {
-                    return source;
+                        <a
+                          href={source.link}
+                          target="_blank"
+                          className="text-base whitespace-normal underline text-gray-500"
+                        >
+                          {source.type}
+                        </a>
+                      </div>
+                    );
                   })}
-                </p> */}
+                {portfolio.source.length === 0 && <p>-</p>}
               </div>
             </div>
           </div>
