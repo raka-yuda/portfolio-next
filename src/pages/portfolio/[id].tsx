@@ -33,6 +33,7 @@ const Portfolio = ({ portfolio }: Props) => {
                         <a
                           href={source.link}
                           target="_blank"
+                          rel="noreferrer"
                           className="text-base whitespace-normal underline text-gray-500"
                         >
                           {source.type}
