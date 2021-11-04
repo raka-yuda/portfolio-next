@@ -10,8 +10,8 @@ type ResponseType = {
 };
 
 const fetchPortfolios = () => {
-  const dataPath = "./public/data/list-portfolio.json";
-  const rawData = fs.readFileSync(path.resolve(dataPath), "utf-8");
+  const dataPath = "./data/list-portfolio.json";
+  const rawData = fs.readFileSync(dataPath, "utf-8");
   return JSON.parse(rawData) as Portfolio[];
 };
 
