@@ -11,7 +11,11 @@ type ResponseType = {
 
 const fetchPortfolios = () => {
   const dataPath = "./src/data/list-portfolio.json";
-  const rawData = fs.readFileSync(path.resolve(dataPath), "utf-8");
+  
+  const dirRelativeToPublicFolder = '/data/list-portfolio.json'
+  const dir = path.resolve('./src', dirRelativeToPublicFolder);
+
+  const rawData = fs.readFileSync(dir);
   return JSON.parse(rawData) as Portfolio[];
 };
 
