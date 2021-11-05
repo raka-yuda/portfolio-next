@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import classes from "./home.module.scss";
-import Link from "next/link";
-import Image from "next/image";
+import Head from "next/head";
 import { Portfolio } from "../types/portfolio";
 import { Contact } from "../types/contact";
 import { Techstack } from "../types/techstack";
@@ -36,6 +35,11 @@ const Index = ({ portfolios, contacts, techstacks }: Props) => {
 
   return (
     <div>
+      <Head>
+        <title>Portfolio | Raka</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {isLoading && (
         <div
           className={`${
