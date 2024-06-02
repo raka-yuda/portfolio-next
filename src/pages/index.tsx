@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import classes from "./home.module.scss";
+// import classes from "./home.module.scss";
 import Head from "next/head";
 import { Portfolio } from "../types/portfolio";
 import { Contact } from "../types/contact";
@@ -43,18 +43,20 @@ const Index = ({ portfolios, contacts, techstacks }: Props) => {
       {isLoading && (
         <div
           className={`${
-            classes[fadeProp.fade]
+            // classes[fadeProp.fade]
+            fadeProp.fade
           } w-screen h-screen flex justify-center items-center `}
         >
-          <div className={classes["square"]}></div>
+          <div className="loader"></div>
+
         </div>
       )}
       {!isLoading && (
         <div className="container md:max-w-screen-lg h-full mx-auto p-8">
           <div className="border px-8 py-48">
             <div className="md:w-3/5">
-              <p className="text-3xl font-bold">Finally you found me</p>
-              <p className="text-3xl font-bold">
+              <p className="text-3xl">Finally you found me</p>
+              <p className="text-3xl">
                 Hi, I’m Raka Yuda, and this is my portfolio website
               </p>
             </div>
