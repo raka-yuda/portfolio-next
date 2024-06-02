@@ -21,3 +21,81 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*@keyframes snake {
+  0%, 100% {
+    box-shadow: 0 -52px 0 2px black, -52px 0 0 2px black, 0 52px 0 2px black, 52px 0 0 2px black, 0 0 0 2px black;
+  }
+  25% {
+    box-shadow: -32px -52px 0 2px black, -52px 0 0 2px black, 0 52px 0 2px black, 52px 0 0 2px black, 0 0 0 2px black;
+  }
+  50% {
+    box-shadow: -32px -52px 0 2px black, -52px 72px 0 2px black, 0 52px 0 2px black, 52px 0 0 2px black, 0 0 0 2px black;
+  }
+  75% {
+    box-shadow: -32px -52px 0 2px black, -52px 72px 0 2px black, 44px 72px 0 2px black, 52px 0 0 2px black, 0 0 0 2px black;
+  }
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  animation: snake 0.8s infinite;
+  transition: opacity 1s ease;
+}
+*/
+
+.animate-snake {
+  animation: snake 2s infinite linear;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1; /* Assuming fadeIn brings opacity back to 1 */
+}
+
+.loader {
+	position: fixed;
+	box-shadow: 0 0 0 12px #eee inset;
+	width: 64px;
+	height: 64px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.loader:before,
+.loader:after {
+	position: absolute;
+	background: #2b2b2b;
+	content: "";
+	width: 12px;
+	height: 12px;
+	left: 0;
+	top: 0;
+	animation: square 1s linear infinite;
+}
+
+@keyframes square {
+	25% {
+		left: 100%;
+		top: 0;
+		transform: translate(-100%, 0);
+	}
+	50% {
+		left: 100%;
+		top: 100%;
+		transform: translate(-100%, -100%);
+	}
+	75% {
+		left: 0;
+		top: 100%;
+		transform: translate(0, -100%);
+	}
+}
