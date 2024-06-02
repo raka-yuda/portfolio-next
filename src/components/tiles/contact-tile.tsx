@@ -12,8 +12,8 @@ const ContactTile = ({ href, title, imageUrl, className }: Props) => {
     <div
       className={`flex flex-row justify-center items-center z-0 ${className}`}
     >
-      <Link href={href} passHref>
-        <a href={href} target="_blank" rel="noopener noreferrer">
+      <Link href={href} passHref target="_blank" rel="noopener noreferrer">
+        {/* <a href={href} target="_blank" rel="noopener noreferrer"> */}
           <div
             className="cursor-pointer relative h-36 w-48 mr-4 mt-4"
             style={{
@@ -38,7 +38,7 @@ const ContactTile = ({ href, title, imageUrl, className }: Props) => {
               </div>
             </div>
           </div>
-        </a>
+        {/* </a> */}
       </Link>
     </div>
   );
