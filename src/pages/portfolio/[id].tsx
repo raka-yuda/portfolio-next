@@ -130,10 +130,7 @@ const Portfolio = ({ portfolio }: Props) => {
 // };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  let baseUrl =
-    process.env.NODE_ENV === "production"
-      ? "https://portfolio-rakayuda.vercel.app"
-      : "http://localhost:3000";
+  let baseUrl = process.env.BASE_URL;
   {
     const res = await fetch(baseUrl + "/api/portfolios/" + params!.id); // import your api function here
     const data = await res.json();
