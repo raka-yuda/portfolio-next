@@ -137,6 +137,10 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   {
     const res = await fetch(baseUrl + "/api/portfolios/" + params!.id); // import your api function here
     const data = await res.json();
+    
+    if (!data.portfolio) {
+      return { notFound: true }; 
+    };
 
     return {
       props: {
