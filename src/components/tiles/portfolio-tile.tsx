@@ -4,13 +4,13 @@ type Props = {
   href: string;
   title: string;
   imageUrl: string;
-  className: string | null;
+  className?: string | null;
 };
 
-const PortfolioTile = ({ href, title, imageUrl, className }: Props) => {
+const PortfolioTile = ({ href, title, imageUrl, className = "" }: Props) => {
   return (
     <div
-      className={`flex flex-row justify-center items-start z-0 ${className}`}
+      className={`flex flex-row justify-center items-start z-0 even:md:mt-12 ${className}`}
     >
       <Link href={href}>
         <div

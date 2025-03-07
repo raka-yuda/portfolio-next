@@ -67,18 +67,12 @@ const Index = ({ portfolios, contacts, techstacks }: Props) => {
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 border border-t-0 px-6 py-12">
             {portfolios &&
               portfolios.map((portfolio, index) => {
-                const order = index + 1;
-                let className = "";
-                if (order % 2 == 0) {
-                  className = "md:mt-12";
-                }
                 return (
                   <PortfolioTile
                     key={`portfolio-${index}`}
                     href={`/portfolio/${index}`}
                     imageUrl={portfolio.image_url}
                     title={portfolio.title}
-                    className={className}
                   />
                 );
               })}
