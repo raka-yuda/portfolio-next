@@ -3,7 +3,7 @@ import { Portfolio } from "./../../../types/portfolio";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type ResponseType = {
-  portfolio: Portfolio | "";
+  portfolio: Portfolio | null;
 };
 
 const fetchPortfolios = () => {
@@ -20,7 +20,8 @@ export default function handler(
   let portfolio = null;
 
   if (typeof id === "string") {
-    const data = portfoliosData[parseInt(id)];
+    const data = portfoliosData.find((item: any) => item?.title?.toLowerCase().replace(" ", "-") === id);
+
     if (data === undefined) {
       portfolio = null;
     } else {
@@ -29,7 +30,7 @@ export default function handler(
   }
   if (portfolio === null) {
     res.status(200).json({
-      portfolio: "",
+      portfolio: null,
     });
   } else {
     res.status(200).json({

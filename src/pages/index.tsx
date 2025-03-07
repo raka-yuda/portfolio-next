@@ -70,7 +70,7 @@ const Index = ({ portfolios, contacts, techstacks }: Props) => {
                 return (
                   <PortfolioTile
                     key={`portfolio-${index}`}
-                    href={`/portfolio/${index}`}
+                    href={`/portfolio/${portfolio?.title?.toLowerCase().replace(" ", "-")}`}
                     imageUrl={portfolio.image_url}
                     title={portfolio.title}
                   />

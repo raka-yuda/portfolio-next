@@ -10,9 +10,9 @@ type Props = {
 const PortfolioTile = ({ href, title, imageUrl, className = "" }: Props) => {
   return (
     <div
-      className={`flex flex-row justify-center items-start z-0 even:md:mt-12 ${className}`}
+      className={`flex flex-row justify-center items-start z-0 even:md:mt-12 pr-6 pb-6 last:pb-0 ${className}`}
     >
-      <Link href={href}>
+      <Link className="w-full" href={href}>
         <div
           className="cursor-pointer relative h-36 w-full md:h-52 md:w-80 mr-4 mt-4 "
           style={{
@@ -30,7 +30,7 @@ const PortfolioTile = ({ href, title, imageUrl, className = "" }: Props) => {
               backgroundImage: `url("${imageUrl}")`,
             }}
           >
-            <div className="opacity-0 hover:opacity-100  w-full h-full flex justify-center items-center hover:bg-black hover:bg-opacity-60">
+            <div className="opacity-0 hover:opacity-100 w-full h-full flex justify-center items-center hover:bg-black hover:bg-opacity-60">
               <p className="text-white">{title}</p>
             </div>
           </div>
